@@ -19,6 +19,5 @@
 8. Created two Gauge views for viewing the professionals who are happy with their salary and work/life balance.
 9. Created a Donut Chart to view the Average Salary earned by the participants according to their gender.
 10. Adjusted the themes to my preference.
-![alt text](https://github.com/belgiprem/Portfolio/blob/main/Power%20BI%20Projects/Guided/Survey%20of%20Data%20Professionals%20(Power%20BI%20Dashboard).PNG "Power BI Dashboard")
 
 
