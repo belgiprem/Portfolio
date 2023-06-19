@@ -21,5 +21,5 @@
 * Created a Donut Chart to view the Average Salary earned by the participants according to their gender.
 *  Adjusted the themes to my preference.
   
-![ ](assets/Survey of Data Professionals (Power BI Dashboard).PNG)
+
 
