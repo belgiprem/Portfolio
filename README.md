@@ -4,7 +4,8 @@
 
 ### Project1: Power BI Dashboard for Survey of Data Professionals ([Guided by Alex the Analyst](https://www.youtube.com/watch?v=pixlHHe_lNQ&t=1s&ab_channel=AlexTheAnalyst))
 + Level - Easy
-### STEPS
+
+### STEPS:
 [Downloaded the dataset from here](https://github.com/AlexTheAnalyst/Power-BI/blob/main/Power%20BI%20-%20Final%20Project.xlsx)
 * Inspected the data in Excel.
 * Opened the Data in Power Query
