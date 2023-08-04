@@ -60,9 +60,15 @@
 * Maharashtra has the highest active case of almost 7 lakh cases.
 2. What is the Recovery rate and Mortality rate?
 * Dadra and Nagar Haveli and Daman and Diu has the highest mortality rate because of low confirmed cases, Punjab has the highest Mortality rate because of low death rate
+
+![](assets/Covid-19 Assets/Mortality and Recovery.PNG)
+  
 3. What are the top 10 states with active cases, highest death count?
 * Maharashtra, Karnataka, Kerala, Tamil Nadu, Uttar Pradesh, Rajasthan, Andhra Pradesh, Gujarat, West Bengal, Chattisgarh - Active Cases
-  Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Kerala, Punjab, Andhra Pradesh, Chattisgarh - Death Cases
+
+![]()
+  
+* Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Kerala, Punjab, Andhra Pradesh, Chattisgarh - Death Cases
 4. What are the top 5 affected states in India?
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
 
