@@ -66,9 +66,12 @@
 3. What are the top 10 states with active cases, highest death count?
 * Maharashtra, Karnataka, Kerala, Tamil Nadu, Uttar Pradesh, Rajasthan, Andhra Pradesh, Gujarat, West Bengal, Chattisgarh - Active Cases
 
-![]()
+![](assets/Covid-19 Assets/Top 10 states active cases.png)
   
 * Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Kerala, Punjab, Andhra Pradesh, Chattisgarh - Death Cases
+
+![](assets/Covid-19 Assets/Top 10 states with most death.png)
+  
 4. What are the top 5 affected states in India?
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
 
