@@ -66,7 +66,7 @@
 4. What are the top 5 affected states in India?
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
 
-![]()
+![](assets/Covid-19 Assets/Top 5 affected states.png)
 
 5. How does the ratio of male and female vaccined compare?
 * Male - 53% Female - 47%
