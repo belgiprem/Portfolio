@@ -67,9 +67,15 @@
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
 5. How does the ratio of male and female vaccined compare?
 * Male - 53% Female - 47%
+  
+![]()
+  
 6. Which are the states with most and least vaccinated individuals?
 * Maharashtra, Uttar Pradesh, Rajasthan, Gujarat, West Bengal - Most Vaccinated
-  Lakshadweep, Andaman and Nicobar, Ladakh states, Dadra and Nagar Haveli and Damn and Diu, Sikkim - least Vaccinated.
+
+![](assets/Covid-19 Assets/Top 5 vaccinated states.png)
   
-  ![](assets/Covid-19 Assets/Least 5 vaccinated states.png)
+ * Lakshadweep, Andaman and Nicobar, Ladakh states, Dadra and Nagar Haveli and Damn and Diu, Sikkim - least Vaccinated.
+  
+ ![](assets/Covid-19 Assets/Least 5 vaccinated states.png)
 
