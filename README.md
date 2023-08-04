@@ -56,14 +56,14 @@
 
 + Conclusion
 
-1. What is the total number of active cases?
+a. What is the total number of active cases?
 * Maharashtra has the highest active case of almost 7 lakh cases.
-2. What is the Recovery rate and Mortality rate?
+b. What is the Recovery rate and Mortality rate?
 * Dadra and Nagar Haveli and Daman and Diu has the highest mortality rate because of low confirmed cases, Punjab has the highest Mortality rate because of low death rate
 
 ![](assets/Covid-19 Assets/Mortality and Recovery.PNG)
   
-3. What are the top 10 states with active cases, highest death count?
+c. What are the top 10 states with active cases, highest death count?
 * Maharashtra, Karnataka, Kerala, Tamil Nadu, Uttar Pradesh, Rajasthan, Andhra Pradesh, Gujarat, West Bengal, Chattisgarh - Active Cases
 
 ![](assets/Covid-19 Assets/Top 10 states active cases.png)
@@ -72,17 +72,17 @@
 
 ![](assets/Covid-19 Assets/Top 10 states with most death.png)
   
-4. What are the top 5 affected states in India?
+d. What are the top 5 affected states in India?
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
 
 ![](assets/Covid-19 Assets/Top 5 affected states.png)
 
-5. How does the ratio of male and female vaccined compare?
+e. How does the ratio of male and female vaccined compare?
 * Male - 53% Female - 47%
   
 ![](assets/Covid-19 Assets/Male vs Female.png)
   
-6. Which are the states with most and least vaccinated individuals?
+f. Which are the states with most and least vaccinated individuals?
 * Maharashtra, Uttar Pradesh, Rajasthan, Gujarat, West Bengal - Most Vaccinated
 
 ![](assets/Covid-19 Assets/Top 5 vaccinated states.png)
