@@ -29,4 +29,5 @@
 ### STEPS :
 [Downloaded the dataset from here](https://www.kaggle.com/datasets/sudalairajkumar/covid19-in-india)
 * Inspected the data in Excel and took note on missing values and discrepancies in data.
+* Imported necessary librarioes in python, like pandas, numpy, matplotlib, seaborn and plotly.
 
