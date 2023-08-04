@@ -3,8 +3,32 @@
 ### STEPS:
 Downloaded the dataset from here
 
-Inspected the data in Excel and took note on missing values and discrepancies in data.
-Imported necessary librarioes in python, like pandas, numpy, matplotlib, seaborn and plotly.
+* Inspected the data in Excel and took note on missing values and discrepancies in data.
+* Imported necessary librarioes in python, like pandas, numpy, matplotlib, seaborn and plotly.
+*Imported the files
+*viewing the file
+*Using info function to view information of the files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
