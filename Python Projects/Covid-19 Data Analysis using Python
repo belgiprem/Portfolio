@@ -1,6 +1,8 @@
-Level - Intermediate
+- Level - Intermediate
+
 STEPS :
 Downloaded the dataset from here
 
 Inspected the data in Excel and took note on missing values and discrepancies in data.
 Imported necessary librarioes in python, like pandas, numpy, matplotlib, seaborn and plotly.
+
