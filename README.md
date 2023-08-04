@@ -65,10 +65,13 @@
   Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Kerala, Punjab, Andhra Pradesh, Chattisgarh - Death Cases
 4. What are the top 5 affected states in India?
 * Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
+
+![]()
+
 5. How does the ratio of male and female vaccined compare?
 * Male - 53% Female - 47%
   
-![]()
+![](assets/Covid-19 Assets/Male vs Female.png)
   
 6. Which are the states with most and least vaccinated individuals?
 * Maharashtra, Uttar Pradesh, Rajasthan, Gujarat, West Bengal - Most Vaccinated
