@@ -24,4 +24,33 @@
 * Plotted Bar graph for top 10 states with most active cases in India.
 * Plotted Bar graph for top 10 states with most deaths in India.
 * Plotted line graph for top 5 affected states in India.
-* R
+* Renamed few columns and dropped the columns with no data for the Vaccine dataset.
+* Plotted Bar graph for Top 5 Vaccinated states in India.
+* Plotted Bar graph for Least 5 Vaccinated states in India.
+
++ Conclusion
+
+1. What is the total number of active cases?
+* Maharashtra has the highest active case of almost 7 lakh cases.
+2. What is the Recovery rate and Mortality rate?
+* Dadra and Nagar Haveli and Daman and Diu has the highest mortality rate because of low confirmed cases, Punjab has the highest Mortality rate because of low death rate
+3. What are the top 10 states with active cases, highest death count?
+* Maharashtra, Karnataka, Kerala, Tamil Nadu, Uttar Pradesh, Rajasthan, Andhra Pradesh, Gujarat, West Bengal, Chattisgarh - Active Cases
+  Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Kerala, Punjab, Andhra Pradesh, Chattisgarh - Death Cases
+4. What are the top 5 affected states in India?
+* Kerala, Uttar Pradesh, Tamil Nadu, Karnataka, Maharashtra
+5. How does the ratio of male and female vaccined compare?
+* Male - 53% Female - 47%
+6. Which are the states with most and least vaccinated individuals?
+* Maharashtra, Uttar Pradesh, Rajasthan, Gujarat, West Bengal - Most Vaccinated
+  Lakshadweep, Andaman and Nicobar, Ladakh states, Dadra and Nagar Haveli and Damn and Diu, Sikkim - least Vaccinated.
+
+
+
+
+
+
+
+
+
+
