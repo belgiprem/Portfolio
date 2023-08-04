@@ -2,7 +2,7 @@
 
 ## Projects
 
-### Project1: Power BI Dashboard for Survey of Data Professionals ([Guided by Alex the Analyst](https://www.youtube.com/watch?v=pixlHHe_lNQ&t=1s&ab_channel=AlexTheAnalyst))
+### Project - 1: Power BI Dashboard for Survey of Data Professionals ([Guided by Alex the Analyst](https://www.youtube.com/watch?v=pixlHHe_lNQ&t=1s&ab_channel=AlexTheAnalyst))
 + Level - Easy
 
 ### STEPS : 
@@ -23,4 +23,10 @@
 
   ![](assets/Survey of Data Professionals (Power BI Dashboard).PNG)
 
+### Project - 2: Covid-19 Data Analysis using Python
++ Level - Intermediate
+
+### STEPS :
+[Downloaded the dataset from here](https://www.kaggle.com/datasets/sudalairajkumar/covid19-in-india)
+* Inspected the data in Excel and took note on missing values and discrepancies in data.
 
