@@ -70,5 +70,6 @@
 6. Which are the states with most and least vaccinated individuals?
 * Maharashtra, Uttar Pradesh, Rajasthan, Gujarat, West Bengal - Most Vaccinated
   Lakshadweep, Andaman and Nicobar, Ladakh states, Dadra and Nagar Haveli and Damn and Diu, Sikkim - least Vaccinated.
+  
   ![](assets/Covid-19 Assets/Least 5 vaccinated states.png)
 
