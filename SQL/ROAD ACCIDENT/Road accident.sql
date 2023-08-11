@@ -1,0 +1,200 @@
+--view all the data from road_accident --
+-- SELECT * FROM road_accident;
+
+--KPIs--
+--Current year Casualties--
+SELECT SUM(number_of_casualties) AS total_Casualties FROM road_accident; --Total no of Casualties - 417883--
+SELECT SUM(number_of_casualties) AS CY_Casualties FROM road_accident WHERE YEAR(accident_date) = '2022';--Current Year Casualties - 195737--
+
+--Previous year Casualties--
+SELECT SUM(number_of_casualties) AS PY_Casualties FROM road_accident WHERE YEAR(accident_date) = '2021';--Previous Year Casualties - 222146--
+
+-- CY Casualties for Different conditions--
+SELECT SUM(number_of_casualties) AS CY_Casualties_Dry FROM road_accident WHERE YEAR(accident_date) = '2022' AND road_surface_conditions = 'Dry';--Current Year Casualties (Dry condition) - 131976--
+SELECT SUM(number_of_casualties) AS CY_Casualties_wet FROM road_accident WHERE YEAR(accident_date) = '2022' AND road_surface_conditions = 'wet or damp';--Current Year Casualties (wet or damp condition) - 50365--
+SELECT SUM(number_of_casualties) AS CY_Casualties_daylight FROM road_accident WHERE YEAR(accident_date) = '2022' AND light_conditions = 'Daylight'; --Current Year Casualties (Daylight condition) - 144539--
+
+--CY Accidents--
+SELECT COUNT (DISTINCT accident_index) AS CY_Accidents FROM road_accident WHERE YEAR(accident_date) = '2022';--Current Year Accidents - 144419--
+
+--CY Fatal Casualties--
+SELECT SUM(number_of_casualties) AS CY_Fatal_Casualties FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Fatal';--Current Year Fatal Casualties - 2855--
+
+--CY Slight Casualties--
+SELECT SUM(number_of_casualties) AS CY_Slight_Casualties FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Slight';--Current Year Slight Casualties - 165837--
+
+--CY Serious Casualties--
+
+SELECT SUM(number_of_casualties) AS CY_Serious_Casualties FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Serious';--Current Year Serious Casualties - 27045--
+
+--percentage slight casualties--
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS CYPercentage_slight FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Slight';--Current Year Slight Casualties Percentage - 39.68%--
+
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS PCT_slight FROM road_accident WHERE  accident_severity = 'Slight';--Total Slight Casualties Percentage - 84.09%--
+
+--percentage serious casualties--
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS CYPercentage_serious FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Serious';--Current Year Serious Casualties Percentage - 6.48%--
+
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS PCT_serious FROM road_accident WHERE accident_severity = 'Serious';--Total Serious Casualties Percentage - 14.19%--
+
+--percentage fatal casualties--
+
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS CYPercentage_fatal FROM road_accident WHERE YEAR(accident_date) = '2022' AND accident_severity = 'Fatal';--Current Year Fatal Casualties Percentage - 0.68%--
+
+SELECT CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100/ 
+(SELECT CAST(SUM(number_of_casualties)  AS DECIMAL(10,2)) FROM road_accident) AS PCT_fatal FROM road_accident WHERE accident_severity = 'Fatal';--Total Fatal Casualties Percentage - 1.70%--
+
+
+-- Casualties  by Vehicle type --
+SELECT SUM(number_of_casualties) AS casualties_vehicletype_Car  FROM road_accident WHERE vehicle_type = 'Car'; -- Casualties by Car - 325922 --
+SELECT SUM(number_of_casualties) AS casualties_vehicletype_Taxi_Private_hire_car  FROM road_accident WHERE vehicle_type = 'Taxi/Private hire car'; -- Casualties by Car - 7563 --
+SELECT SUM(number_of_casualties) AS casualties_vehicletype_Goods_over_3_5t_and_under_7_5t  FROM road_accident WHERE vehicle_type = 'Goods over 3.5t. and under 7.5t'; -- Casualties by Car - 3404--
+
+--Vehicle with most accident--
+SELECT MAX(vehicle_type) AS vehicle_with_most_accident FROM road_accident; --Vehicle with most accident - Van/Goods 3.5 tonnes mgw or under--
+SELECT MIN(vehicle_type) AS vehicle_with_leat_accident FROM road_accident; --Vehicle with least accident - Agricultural Vehicle --
+SELECT COUNT(vehicle_type) AS no_of_vehicle_with_most_accident FROM road_accident WHERE vehicle_type = 'Van / Goods 3.5 tonnes mgw or under'  -- No of vehicle with most accident - 15695 --
+SELECT COUNT(vehicle_type) AS no_of_vehicle_with_leat_accident FROM road_accident WHERE vehicle_type = 'Agricultural Vehicle'  -- No of vehicle with most accident - 749 --
+
+-- Grouping Vehicle type casualties for Current year --
+SELECT 
+	CASE 
+		WHEN vehicle_type IN ('Agricultural Vehicle') Then 'Agricultural'
+		WHEN vehicle_type IN ('Car', 'Taxi/Private hire car') Then 'Cars'
+		WHEN vehicle_type IN ('Motorcycle over 500cc', 'Motorcycle 125cc and under', 'Motorcycle 50cc and under', 'Motorcycle over 125cc and up to 500cc', 'Pedal cycle' ) Then 'Bikes'
+		WHEN vehicle_type IN ('Bus or coach (17 or more pass seats)', 'Minibus (8 - 16 passenger seats)') Then 'Bus'
+		WHEN vehicle_type IN ('Van / Goods 3.5 tonnes mgw or under', 'Goods over 3.5t. and under 7.5t', 'Goods 7.5 tonnes mgw and over') Then 'Trucks'
+		ELSE 'Other'
+	END AS vehicle_group,
+	SUM(number_of_Casualties) AS CY_Casualties_Vehicle_type
+From road_accident
+WHERE YEAR(accident_date) = '2022'
+GROUP BY
+	CASE 
+		WHEN vehicle_type IN ('Agricultural Vehicle') Then 'Agricultural'
+		WHEN vehicle_type IN ('Car', 'Taxi/Private hire car') Then 'Cars'
+		WHEN vehicle_type IN ('Motorcycle over 500cc', 'Motorcycle 125cc and under', 'Motorcycle 50cc and under', 'Motorcycle over 125cc and up to 500cc', 'Pedal cycle' ) Then 'Bikes'
+		WHEN vehicle_type IN ('Bus or coach (17 or more pass seats)', 'Minibus (8 - 16 passenger seats)') Then 'Bus'
+		WHEN vehicle_type IN ('Van / Goods 3.5 tonnes mgw or under', 'Goods over 3.5t. and under 7.5t', 'Goods 7.5 tonnes mgw and over') Then 'Trucks'
+		ELSE 'Other'
+	END ;
+
+
+-- CY monthly trend
+SELECT DATENAME(MONTH, accident_date) AS Month_name, SUM(number_of_casualties) 'CY Casualties'
+FROM road_accident 
+WHERE YEAR(accident_date) = '2022'
+GROUP BY DATENAME(MONTH, accident_date);
+
+-- PY monthly trend
+SELECT DATENAME(MONTH, accident_date) AS Month_name, SUM(number_of_casualties) 'PY Casualties'
+FROM road_accident 
+WHERE YEAR(accident_date) = '2021'
+GROUP BY DATENAME(MONTH, accident_date);
+
+-- Casualties by Road type CY--
+SELECT road_type , SUM(number_of_casualties) AS CY_casualties_roadtype FROM road_accident
+WHERE YEAR(accident_date) = '2022'
+GROUP BY road_type;
+
+-- Casualties by Road type PY--
+SELECT road_type , SUM(number_of_casualties) AS PY_casualties_roadtype FROM road_accident
+WHERE YEAR(accident_date) = '2021'
+GROUP BY road_type;
+
+-- Casualties by rural/urban CY--
+SELECT urban_or_rural_area , SUM(number_of_casualties) AS CY_casualties_urban_rural  FROM road_accident
+WHERE YEAR(accident_date) = '2022'
+GROUP BY urban_or_rural_area;-- rural - 74486 - urban - 121251 --
+
+-- Casualties by rural/urban PY--
+SELECT urban_or_rural_area , SUM(number_of_casualties) AS PY_casualties_urban_rural FROM road_accident
+WHERE YEAR(accident_date) = '2021'
+GROUP BY urban_or_rural_area; -- rural - 87533 - urban - 134613 --
+
+-- percentage Casualties by rural/urban CY--
+SELECT urban_or_rural_area , CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) *100 / 
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) 
+	FROM road_accident WHERE YEAR(accident_date) = '2022') 
+AS PCT_CY_casualties_urban_rural FROM road_accident
+WHERE YEAR(accident_date) = '2022'
+GROUP BY urban_or_rural_area; -- rural - 38.05% - urban - 61.94% --
+
+-- Percentage Casualties by rural/urban PY--
+SELECT urban_or_rural_area , CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) *100 / 
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) 
+	FROM road_accident WHERE YEAR(accident_date) = '2021') 
+AS PCT_PY_casualties_urban_rural FROM road_accident
+WHERE YEAR(accident_date) = '2021'
+GROUP BY urban_or_rural_area; -- rural - 39.40% - urban - 60.59% --
+
+-- Total Percentage Casualties by rural/urban --
+
+SELECT urban_or_rural_area , SUM(number_of_casualties) AS Total_no_of_casualties , CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) *100 / 
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) 
+	FROM road_accident) 
+AS PCT_Total_casualties_urban_rural FROM road_accident
+GROUP BY urban_or_rural_area; -- rural - 38.77% - 162019 - urban - 61.22% - 255864 --
+
+-- Casualties by light condition CY--
+SELECT
+	CASE
+		WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END AS Light_Condition,
+	CAST(CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100 /
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) FROM road_accident WHERE YEAR(accident_date) = '2022') AS DECIMAL(10,2))
+	AS CY_Casualties_PCT
+FROM road_accident
+WHERE YEAR(accident_date) = '2022'
+GROUP BY
+CASE 
+	WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END  -- Day - 73.84% - Night - 26.16% -- 
+
+-- Casualties by light condition PY--
+
+	SELECT
+	CASE
+		WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END AS Light_Condition,
+	CAST(CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100 /
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) FROM road_accident WHERE YEAR(accident_date) = '2021') AS DECIMAL(10,2))
+	AS PY_Casualties_PCT
+FROM road_accident
+WHERE YEAR(accident_date) = '2021'
+GROUP BY
+CASE 
+	WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END  -- Day - 72.22% - Night - 27.78% --
+
+	-- Casualties by light condition Total--
+	
+	SELECT
+	CASE
+		WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END AS Light_Condition,
+	CAST(CAST(SUM(number_of_casualties) AS DECIMAL(10,2)) *100 /
+	(SELECT CAST(SUM(number_of_casualties) AS DECIMAL (10,2)) FROM road_accident)  AS DECIMAL(10,2))
+	AS Total_Casualties_PCT
+FROM road_accident
+GROUP BY
+CASE 
+	WHEN light_conditions IN ('Daylight') THEN 'Day'
+		WHEN light_conditions IN ('Darkness - lights lit','Darkness - no lighting', 'Darkness - lighting unknown', 'Darkness - lights unlit') THEN 'Night'
+	END  -- Day - 72.98% - Night - 27.02% --
+
+-- TOP 10 location --
+SELECT TOP 10 local_authority, SUM(number_of_casualties) AS total_casualties_location 
+FROM road_accident 
+GROUP BY local_authority
+ORDER BY total_casualties_location DESC;
