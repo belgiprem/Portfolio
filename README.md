@@ -2,7 +2,7 @@
 
 ## Projects
 
-### Project - 1: Power BI Dashboard for Survey of Data Professionals ([Guided by Alex the Analyst](https://www.youtube.com/watch?v=pixlHHe_lNQ&t=1s&ab_channel=AlexTheAnalyst))
+### Project - 1: [Power BI Dashboard for Survey of Data Professionals](https://github.com/belgiprem/Portfolio-Projects/tree/main/Power%20BI%20Projects/Guided) 
 + Level - Easy
 
 ### STEPS : 
