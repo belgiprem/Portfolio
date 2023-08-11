@@ -23,7 +23,7 @@
 
   ![](assets/Survey of Data Professionals (Power BI Dashboard).PNG)
 
-### Project - 2: Covid-19 Data Analysis using Python
+### Project - 2: [Covid-19 Data Analysis using Python](https://github.com/belgiprem/Portfolio-Projects/tree/main/Python%20Projects/Covid%20Data%20Analysis)
 + Level - Intermediate
 
 ++ Objective - To analyse the Covid-19 dataset from Kaggle and provide answers to the following questions:-
