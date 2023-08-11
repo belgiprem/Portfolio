@@ -92,7 +92,7 @@ f. Which are the states with most and least vaccinated individuals?
   
  ![](assets/Covid-19 Assets/Least 5 vaccinated states.png)
 
-### Project - 3: SQL Query for Road Accident Dataset 
+### Project - 3: [SQL Query for Road Accident Dataset]( 
 + Level - Easy
 
 ### STEPS : 
@@ -111,26 +111,29 @@ f. Which are the states with most and least vaccinated individuals?
   2. Previous year Casualties
   3. CY Casualties for Different conditions
   4. CY Accidents
-  5. CY Fatal Casualties
-  6. CY Slight Casualties
-  7. CY Serious Casualties
-  8. Percentage slight casualties
-  9. Percentage serious casualties
-  10. Percentage fatal casualties
-  11. Casualties  by Vehicle type
-  12. Vehicle with most accident
-  13. Grouping Vehicle type casualties for Current year
-  14. CY monthly trend
-  15. PY monthly trend
-  16. Casualties by Road type CY
-  17.  Casualties by Road type PY
-  18.  Casualties by rural/urban CY
-  19.  Casualties by rural/urban PY
-  20.  Percentage Casualties by rural/urban CY
-  21.  Percentage Casualties by rural/urban PY
-  22.  Total Percentage Casualties by rural/urban
-  23.  Casualties by light condition CY
-  24.  Casualties by light condition PY
-  25.  Casualties by light condition Total
-  26.  TOP 10 location 
-  ![]
+![](SQL/ROAD ACCIDENT/1.PNG)
+  6. CY Fatal Casualties
+  7. CY Slight Casualties
+  8. CY Serious Casualties
+  9. Percentage slight casualties
+  10. Percentage serious casualties
+![](SQL/ROAD ACCIDENT/2.PNG)
+  11. Percentage fatal casualties
+  12. Casualties  by Vehicle type
+  13. Vehicle with most accident
+  14. Grouping Vehicle type casualties for Current year
+  15. CY monthly trend
+  16. PY monthly trend
+![](SQL/ROAD ACCIDENT/3.png)
+  17. Casualties by Road type CY
+  18.  Casualties by Road type PY
+  19.  Casualties by rural/urban CY
+  20.  Casualties by rural/urban PY
+  21.  Percentage Casualties by rural/urban CY
+  22.  Percentage Casualties by rural/urban PY
+  23.  Total Percentage Casualties by rural/urban
+  24.  Casualties by light condition CY
+  25.  Casualties by light condition PY
+  26.  Casualties by light condition Total
+  27.  TOP 10 location 
+ ![](SQL/ROAD ACCIDENT/4.PNG)
