@@ -92,7 +92,7 @@ f. Which are the states with most and least vaccinated individuals?
   
  ![](assets/Covid-19 Assets/Least 5 vaccinated states.png)
 
-### Project - 3: [SQL Query for Road Accident Dataset](SQL/ROAD ACCIDENT/Road accident.sql)  
+### Project - 3: [SQL Query for Road Accident Dataset](SQL/ROAD ACCIDENT)  
 + Level - Easy
 
 ### STEPS : 
